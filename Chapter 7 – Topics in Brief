@@ -1,0 +1,81 @@
+🎯 Objective
+Quickly introduce key NLP applications beyond core tasks: search, topic modeling, summarization, recommendation, translation, and QA systems.
+
+🔹 1. Search & Information Retrieval
+NLP improves query understanding, ranking, snippet generation, and entity extraction.
+
+Components: Indexing (e.g., using TF-IDF), document ranking, spell correction, related queries.
+
+DL models like BERT improve snippet relevance and search quality.
+
+Enterprise search pipelines include custom document processing, indexing, and ranking.
+
+🔹 2. Topic Modeling
+Unsupervised learning to discover topics from large text corpora.
+
+Most common technique: Latent Dirichlet Allocation (LDA).
+
+Outputs: documents as mixtures of topics, topics as distributions of words.
+
+Example: Documents about food/pets can be clustered using word distributions.
+
+Use cases: summarization, trend detection, document classification.
+
+🔹 3. Text Summarization
+Types:
+Extractive: Select important sentences.
+
+Abstractive: Generate new sentences (more complex).
+
+Query-focused vs query-independent.
+
+Single-document vs multi-document summarization.
+
+Tools & Examples:
+Sumy, Gensim (TextRank)
+
+Reddit autotldr bot, news highlighters, summarization for indexing.
+
+Challenges:
+Sensitive to text size and preprocessing (e.g., sentence segmentation).
+
+Abstractive methods are still research-heavy and require DL or RL.
+
+🔹 4. Recommender Systems for Text
+Content-based (e.g., related articles) vs collaborative filtering (e.g., Netflix).
+
+Use topic models or embeddings (e.g., Doc2Vec) to recommend related texts.
+
+Example: Recommend books using text similarity on summaries.
+
+🔹 5. Machine Translation
+APIs like Google Translate, Azure Translator.
+
+Use neural models (seq2seq, attention) for better fluency and contextual accuracy.
+
+Custom training is expensive and best left to companies with specific needs.
+
+🔹 6. Question-Answering (QA)
+Two types:
+
+Extractive QA (return spans from documents).
+
+Knowledge-based QA (map queries to knowledge bases).
+
+Tools: SQuAD, CDQA-Suite, AllenNLP, Bing Answer Search API.
+
+High cost for building web-scale QA systems.
+
+🧪 Evaluation & Practical Tips
+Summarization: use ROUGE scores, or custom human evaluations.
+
+Text length affects performance: use smart slicing or partitioning.
+
+Topic model tuning: choose number of topics manually; use coherence for quality check.
+
+✅ Final Takeaways
+These tasks may not be core NLP applications but are highly impactful in production.
+
+Each task builds on prior concepts: embeddings, classification, extraction, etc.
+
+Start with off-the-shelf tools, and customize as needed.
