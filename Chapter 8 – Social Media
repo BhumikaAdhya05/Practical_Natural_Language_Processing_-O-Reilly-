@@ -1,0 +1,92 @@
+🎯 Objective
+Understand the challenges and techniques of applying NLP to social media text data (SMTD), which is informal, multilingual, and noisy.
+
+📌 Why SMTD Is Unique
+Volume & Velocity: Massive, real-time text streams (e.g., 6,000 tweets/sec).
+
+Style: Highly informal, often ungrammatical, brief, and noisy.
+
+Multilingual & Code-Mixed: Common to see mixed languages and transliterations.
+
+Evolving Vocabulary: New slang, acronyms, and hashtags emerge frequently.
+
+Non-Textual Elements: Emojis, GIFs, images, links, and hashtags embedded in text.
+
+🔍 Challenges of NLP on SMTD
+Challenge	Description
+No grammar	Irregular punctuation, spelling, capitalization.
+Nonstandard spelling	Many variations of the same word (e.g., "tomorrow" → "2mrw", "tmrw").
+Code-mixing	Language blending (e.g., English + Hindi).
+Short text	Brevity impacts context availability.
+Noisy content	Spam, ads, troll messages.
+OOV issues	Frequent new words render static embeddings outdated quickly.
+Informality spectrum	Social media is the least formal compared to blogs, emails, etc. 
+
+💡 NLP Techniques & Tools for SMTD
+Preprocessing Essentials:
+Special tokenizers: twokenize, TweetTokenizer
+
+Normalization: slang translation, hashtag segmentation
+
+Filtering spam and non-actionable content
+
+Handling emojis, non-ASCII text, and short forms.
+
+Representation:
+Use character n-gram embeddings (e.g., fastText) to deal with OOV problems.
+
+Static word embeddings quickly degrade due to evolving vocab.
+
+🔧 Common Applications of NLP on Social Media
+Application	Purpose
+Trending Topic Detection	Identify hot topics and events at scale.
+Sentiment Analysis	Understand public emotion toward products/events.
+Opinion Mining	Extract customer insights and viewpoints.
+Fake News Detection	Prevent misinformation; classify content as fake/real.
+Customer Support	Triage, auto-respond, and escalate actionable messages.
+Adult/Abusive Content	Detect profanity, racism, threats using classification models.
+Meme Identification	Detect content template reuse and troll patterns. 
+
+🧪 Case Study: Actionable vs Noise Detection
+Problem: Brands receive a mix of genuine support requests and noisy chatter.
+
+Solution: Build a classification model to distinguish actionable messages from noise (like spam, opinions).
+
+Pipeline:
+
+Data Collection
+
+Preprocessing
+
+Tokenization
+
+Representation
+
+Model Training
+
+Deployment
+
+📊 Projects & Code Examples
+Word Cloud Generator:
+Pipeline: Tokenize → Remove stopwords → Count → Visualize.
+
+Use specialized tokenizer for tweets (twokenize).
+
+Twitter Sentiment Tracker:
+Use tools like TextBlob or fine-tuned classifiers.
+
+Preprocessing is key to improve model performance on informal text.
+
+Meme Detection:
+Content-based: Pattern matching via regex or similarity metrics.
+
+Behavior-based: Analyze likes/shares/comments for anomaly detection.
+
+✅ Final Takeaways
+Standard NLP tools fail on SMTD due to informality and rapid evolution.
+
+Invest in custom preprocessing and normalization steps.
+
+For production, use hybrid systems with rule-based filters + ML models.
+
+Monitor model accuracy periodically as vocabulary and usage shift rapidly.
