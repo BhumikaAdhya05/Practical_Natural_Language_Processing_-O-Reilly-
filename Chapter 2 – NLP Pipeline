@@ -1,0 +1,118 @@
+🧠 Chapter 2 – NLP Pipeline
+🎯 Objective
+Explain the structure, steps, and best practices of a typical real-world NLP pipeline.
+
+🏗️ Overview of NLP Pipeline
+A pipeline is a sequence of stages for building and maintaining an NLP model. The core stages are:
+
+Data Acquisition
+
+Text Cleaning
+
+Text Preprocessing
+
+Feature Engineering (Text Representation)
+
+Modeling
+
+Evaluation
+
+Deployment
+
+Monitoring and Model Updating
+
+🔹 Step-by-Step Summary
+1. Data Acquisition
+Collect data relevant to the problem domain.
+
+Sources: internal logs, scraped web data, public datasets.
+
+Start with heuristics if data is small, use ML/DL when data is large.
+
+In low-data scenarios, use transfer learning, weak supervision, or data augmentation.
+
+2. Text Cleaning
+Remove HTML, boilerplate, extra spaces, special characters, etc.
+
+Tools: regex, BeautifulSoup (for HTML cleanup).
+
+3. Preprocessing
+Core tasks:
+
+Sentence segmentation, tokenization.
+
+Stopword removal, lowercasing.
+
+Stemming or lemmatization.
+
+Advanced tasks:
+
+POS tagging, parsing, coreference resolution.
+
+Normalization (e.g., social media normalization), language detection.
+
+4. Feature Engineering / Text Representation
+Convert text to numerical form (e.g., TF-IDF, word embeddings).
+
+Classical ML: handcrafted features (e.g., counts, presence of keywords).
+
+DL: automatic representation learning (word2vec, BERT embeddings).
+
+5. Modeling
+Choose model based on task and data:
+
+Traditional ML: SVM, Naive Bayes.
+
+DL: CNN, RNN, Transformers.
+
+Consider constraints: latency, interpretability, scalability.
+
+6. Evaluation
+Model metrics: accuracy, F1-score, precision, recall, AUC.
+
+Business metrics: revenue impact, task automation rate.
+
+Use both intrinsic (model) and extrinsic (business) evaluations.
+
+7. Deployment
+Integrate model into the larger software system.
+
+Steps:
+
+Package model (e.g., as .pkl or ONNX).
+
+Serve model (e.g., REST API, batch process).
+
+Ensure scalability (cloud or on-prem scaling).
+
+8. Monitoring and Model Updating
+Track model health using performance dashboards.
+
+Automate retraining using new feedback/data.
+
+Decide update frequency: daily, weekly, monthly.
+
+Use online learning or memoization strategies when latency is a concern.
+
+🔍 Special Considerations
+Language support: tailor pipeline for low-resource languages or morphologically rich languages.
+
+Deployment strategy: consider use case—real-time systems (chatbots) vs batch systems (reporting).
+
+Pipeline flexibility: real-world pipelines loop between evaluation, preprocessing, and modeling often.
+
+🧪 Case Study: Uber COTA (Customer Support)
+Goal: classify and route support tickets.
+
+Pipeline: Data → Cleaning → Preprocessing (lemmatization, tokenization) → TF-IDF/LSI → Similarity scoring → Binary classification + ranking → Evaluation → Deployment → Monitoring.
+
+Impact: Improved efficiency, reduced cost, and faster resolution.
+
+📌 Final Takeaways
+Not all steps are needed for every project.
+
+NLP pipelines are iterative, not strictly linear.
+
+Build strong baselines early and optimize later.
+
+Align feature design and evaluation with business goals.
