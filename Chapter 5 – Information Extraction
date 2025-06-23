@@ -1,0 +1,91 @@
+🎯 Objective
+Extract structured information (entities, relationships, events) from unstructured text using various NLP techniques and tools.
+
+🗂️ What Is Information Extraction (IE)?
+IE is the task of converting unstructured text into structured data (e.g., entities, dates, relationships).
+
+Examples: Google blurbs, calendar event extraction, news tagging.
+
+📌 IE vs Text Classification
+Feature	Text Classification	Information Extraction
+Input Format	Labeled Texts	Raw Unstructured Text
+Output	Class Label	Structured Records
+Complexity	Lower	Higher (requires deep NLP)
+Techniques	Standard ML/DL	POS, NER, Parsing, Linking
+
+🧭 Applications of IE
+News Tagging: Extract people, orgs, places (e.g., Google News).
+
+Chatbots: Pull entities and context to respond accurately.
+
+Receipts/Forms: Extract amounts, dates (used in banking/fintech apps).
+
+Social Media Monitoring: Extract disaster reports, traffic info, etc.
+
+⚙️ Key IE Tasks
+Task	Description
+Keyphrase Extraction	Extract key concepts (e.g., “buyback,” “stock price”).
+Named Entity Recognition (NER)	Identify proper nouns (e.g., “Apple,” “Luca Maestri”).
+Entity Linking	Link to real-world entries (e.g., “Apple” = Apple Inc.).
+Relation Extraction	Discover connections (e.g., “Luca is CFO of Apple”).
+Event Extraction	Detect structured events (e.g., “Apple buys back stocks”).
+Temporal IE	Extract normalized time expressions (e.g., “Friday” → 2025-06-13).
+Template Filling	Fill predefined slots in event templates (e.g., meeting date, place, time).
+
+🛠️ IE Pipeline
+More NLP-intensive than classification.
+
+Typical steps include:
+
+Text Cleaning
+
+POS Tagging
+
+NER
+
+Dependency Parsing
+
+Coreference Resolution
+
+Task-specific modeling
+
+🧪 Techniques Used
+Rule-Based: Regex for dates, contact details, boilerplate removal.
+
+Statistical Models: CRFs, HMMs for sequence labeling tasks (e.g., NER).
+
+Deep Learning: LSTMs, GRUs, and Transformers for contextual extraction.
+
+Libraries/Tools: spaCy, textacy, Duckling (for temporal IE), Google Cloud NLP, AWS Comprehend.
+
+📊 Real-World Case Study: Meeting Info from Email
+Goal: Extract meeting details (time, location, invitees).
+
+Approach:
+
+Rule-based start → CRF model → LSTM with BERT features.
+
+Feedback loop and fine-tuning using user interaction logs.
+
+Handle multiple meeting mentions via multilabel classification.
+
+💡 Practical Tips
+Pretrained Models are often sufficient unless domain is highly specific.
+
+Hybrid Approach (rules + ML) is common in production.
+
+Start Simple, expand gradually based on feedback and accuracy needs.
+
+Text Extraction Quality (from PDFs, HTML, etc.) heavily impacts performance.
+
+🧭 Summary of Challenges
+IE requires:
+
+Rich domain-specific data.
+
+Careful preprocessing.
+
+Balancing precision & recall.
+
+Often better to use external APIs unless building for niche domain.
+
