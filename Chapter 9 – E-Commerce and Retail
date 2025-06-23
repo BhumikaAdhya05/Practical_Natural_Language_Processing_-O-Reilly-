@@ -1,0 +1,78 @@
+🎯 Objective
+Apply NLP to solve core problems in e-commerce: product search, reviews, recommendations, and cataloging.
+
+🛒 Key Use Cases in E-Commerce NLP
+Task	NLP Contribution
+Product Search	Understand user queries, map to catalog attributes (e.g., color, brand)
+Review Analysis	Sentiment analysis, summarization, helpfulness scoring
+Product Recommendations	Use behavior, reviews, and text content to recommend related items
+Catalog Management	Extract and normalize product attributes, deduplicate, enrich product metadata
+Product Categorization	Classify items into hierarchical taxonomies using titles, descriptions
+
+🔍 1. Product Search & Faceted Navigation
+Faceted search: Enables navigation by filters (e.g., price, size, brand).
+
+Needs attribute extraction for filterable properties.
+
+Use NLP to identify and correct missing or noisy metadata.
+
+Tools: Elasticsearch, Solr for search + facets.
+
+🧾 2. Building a Product Catalog
+a. Attribute Extraction
+Extract structured fields (e.g., color, gender, size) from product titles/descriptions.
+
+ML/DL models used: CRFs, HMMs, LSTMs.
+
+b. Product Categorization
+Classify into taxonomies (e.g., Electronics > Computers > Laptops).
+
+Hierarchical classification using rule-based + ML methods.
+
+c. Product Enrichment
+Improve titles using template-based systems.
+
+Remove irrelevant terms (e.g., "iPhone" from stylus title).
+
+Helps boost click-through and conversion rates.
+
+d. Deduplication & Matching
+Detect and merge listings for the same product with different descriptions.
+
+Use NLP + image analysis (e.g., Siamese networks) for matching.
+
+🧠 3. Review Analysis
+Task	Description
+Sentiment Analysis	Polarity of review (positive/negative/neutral)
+Aspect Sentiment	Sentiment for specific features (e.g., screen, battery)
+Summarization	Use LexRank to summarize grouped aspect reviews
+Helpfulness Ranking	Highlight expert or popular reviews
+
+Combine editorial + user reviews for balanced insights.
+
+🎯 4. Product Recommendations
+Types:
+Behavior-based: Past clicks, purchases.
+
+Content-based: Product descriptions, reviews, attributes.
+
+Hybrid: Combine both using collaborative filtering + NLP.
+
+Case Study: Substitutes and Complements
+Use review-derived topic vectors to infer similarity.
+
+Predict product links using vector similarity + classification.
+
+Enables recommending alternatives and bundled items.
+
+🧪 Additional Techniques
+A/B Testing to measure model impact on click rates, conversions, engagement.
+
+Use external categorization APIs (e.g., Semantics3, eBay) for bootstrapping taxonomy.
+
+✅ Final Takeaways
+E-commerce NLP = structured + unstructured data fusion.
+
+Start with attribute extraction + faceted search, then layer in review analysis and recommendation.
+
+Scale using hybrid systems: rules + ML + DL.
