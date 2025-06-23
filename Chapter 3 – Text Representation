@@ -1,0 +1,92 @@
+🎯 Objective
+Convert raw text into a numerical form that captures linguistic and semantic properties for use in machine learning and deep learning models.
+
+📌 Importance
+Good feature representation is more critical than the algorithm itself.
+
+Text is harder to represent than images or audio due to ambiguity, variability, and context.
+
+🛠️ Categories of Text Representation
+Basic Vectorization Approaches
+
+Distributed Representations
+
+Universal Language Representations
+
+Handcrafted Features
+
+🔹 1. Basic Vectorization Approaches
+🔸 Techniques:
+One-Hot Encoding: Binary vector with a single 1.
+
+Bag of Words (BoW): Frequency count of terms.
+
+TF-IDF: Weighs terms by importance using term frequency and inverse document frequency.
+
+🔸 Drawbacks:
+Sparse and high-dimensional.
+
+Ignores context.
+
+Can't handle OOV (out-of-vocabulary) words.
+
+🔹 2. Distributed Representations
+🔸 Key Concepts:
+Distributional Hypothesis: Words used in similar contexts have similar meanings.
+
+Represent words as dense, low-dimensional vectors (word embeddings).
+
+🔸 Models:
+Word2Vec: Uses Skip-Gram and CBOW to learn word vectors.
+
+GloVe: Captures global word co-occurrence statistics.
+
+fastText: Uses character n-grams to handle subword info and OOV words.
+
+🔸 Pros:
+Captures semantic similarity.
+
+More compact and computationally efficient.
+
+🔹 3. Universal Language Representations
+🔸 Motivation:
+Traditional embeddings give the same vector for a word in all contexts.
+
+🔸 Contextualized Embeddings:
+ELMo, BERT:
+
+Use language modeling to learn context-aware embeddings.
+
+Trained on massive corpora, then fine-tuned for tasks.
+
+🔸 Caution:
+Biases in pretrained embeddings due to training data.
+
+Large size (e.g., 4–6GB for Word2Vec) can be deployment bottlenecks.
+
+🔹 4. Handcrafted Features
+🔸 When to Use:
+Domain-specific knowledge exists.
+
+Embeddings fail to capture subtle semantics (e.g., sarcasm, domain cues).
+
+🔸 Examples:
+Use of lexicons, custom tag counts, regex patterns.
+
+ETS’s TextEvaluator uses ~100 custom features for essay scoring.
+
+📊 Visualizing Embeddings
+t-SNE: Dimensionality reduction for visualizing vector clusters.
+
+Useful to inspect quality of embeddings—e.g., “king” – “man” + “woman” ≈ “queen”.
+
+💡 Final Insights
+Hybrid features (embeddings + handcrafted) often perform best.
+
+Choose representation based on:
+
+Task (e.g., classification vs extraction),
+
+Data availability,
+
+Deployment constraints.
